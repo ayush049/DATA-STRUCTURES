@@ -1,7 +1,7 @@
 ########## table program ####################
 # n=int(input("enter the number :- "))
 # for i in range(1,11):
-#     print(i,"x",n,"=",n*i)
+#     print(n,"x",i,"=",n*i)
 
 ######### even odd program #################
 # n=int(input("enter the number :- "))
@@ -20,5 +20,4 @@
 #     print(n,"is a prime number")
 # else:
 #     print(n,"is not a prime number")
-
 
