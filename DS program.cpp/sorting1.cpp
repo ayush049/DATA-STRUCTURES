@@ -1,4 +1,4 @@
-//BUBBLE SORT
+//REFINED BUBBLE SORT
 
 #include<iostream>
 using namespace std;
@@ -18,7 +18,7 @@ void bsort(int a[],int n){
         }
         c++;
     }
-    cout<<"number of passes"<<c<<endl;
+    cout<<"number of passes: "<<c<<endl;
     cout<<"The sorted array is: ";
     for(int i=0;i<n;i++){
         cout<<a[i]<<" ";
