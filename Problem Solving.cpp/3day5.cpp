@@ -8,9 +8,11 @@ int main(){
     int x;
     cout<<"Enter value of x: ";
     cin>>x;
-    for(int i=1;i<=n;i++){
-        f=f*i;
-        s=s+x*(i/f);
+    int sign=1;
+    for(int i=1;i<=n;i+=1){
+        f=f*(2*i-1);
+        s=s+sign*x*((2*i-1)/f);
+        sign=sign*(-1);
     }
     cout<<"Sum is: "<<s;
 }
