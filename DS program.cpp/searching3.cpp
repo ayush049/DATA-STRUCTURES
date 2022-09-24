@@ -10,15 +10,15 @@ int tsearch(int a[],int x,int l,int h){
     else if(x==a[mid2])
         return mid2;
     else if(x<a[mid1])
-        tsearch(a,x,l,mid1-1);
+        return tsearch(a,x,l,mid1-1);
         
     else if(x>a[mid2])
-        tsearch(a,x,mid2+1,h);
+        return tsearch(a,x,mid2+1,h);
     else
-        mid1=mid1+1;
-        mid2=mid2-1;
-    
-    return 0;
+        // mid1=mid1+1;
+        // mid2=mid2-1;
+        return tsearch(a,x,mid1+1,mid2-1);
+    //return 1;   
 }
 
 int main(){
