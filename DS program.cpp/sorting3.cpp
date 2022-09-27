@@ -1,4 +1,4 @@
-//INSERTIONN SORT
+//INSERTION SORT
 
 #include<iostream>
 using namespace std;

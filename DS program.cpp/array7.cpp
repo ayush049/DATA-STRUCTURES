@@ -1,19 +1,22 @@
-#include<iostream>
+//REVERSAL OF AN ARRAY 
+
+#include <iostream>
 using namespace std;
 int main(){
-    int i,j,n,t[20];
-    int a[20]={5,10,15,20,25};
-    //n=5;
-    i=0;
-    j=4;
-    while(i<j){
-        t[20]=a[i];
-        a[i]=a[j];
-        a[j]=t[20];
-        i++;
-        j--;
-        cout<<t[20]<<endl;
+    int n,i,temp=0 ;
+    cout<<"Enter the size of array :- ";
+    cin>>n;
+    int a[n];
+    cout<<"Enter the elements : ";
+    for(int i=0;i<n;i++){
+        cin>>a[i];
+    }
+    for(i=0 ; i<n/2 ; i++){
+        temp=a[i];
+        a[i]=a[n-i-1];
+        a[n-i-1]=temp;
+        }
+    for(int i = 0; i < n; i++){
+        cout<<a[i]<<" ";
     }
 }
-
-// wrong 

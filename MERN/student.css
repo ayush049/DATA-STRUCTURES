@@ -1,0 +1,18 @@
+.A{
+    background-color: aquamarine;
+}
+#B{
+    text-align: center;
+}
+#S{
+    /* width: 1px; */
+    height: 10px;
+}
+button:hover{
+    background-color: red;
+    color: aqua
+}
+#q:hover{
+    background-color: red;
+    color: aqua
+}

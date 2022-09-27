@@ -1,39 +1,45 @@
 #include<bits/stdc++.h>
 using namespace std;
-int jsearch(int a[],int n,int x){
-    int m=sqrt(n);
-    int l=0;
-    int h=m;
-    int i=0;
-    while(l<h){
-        if(x<=h)
-            return(l,h);
-        else if(x>h){
-            return (a,l+m,h+m);
-        }
 
-    }
+int lsearch(int a[],int lo,int hi,int x){
+     for(int i=lo;i<=hi;i++){
+          if(a[i] == x)
+               return i;
+     }
+     return -1;
 }
+
+int jsearch(int a[],int n,int x){
+       int jump = sqrt(n);
+       int lo = 0 , hi = jump;
+       while( hi< n){
+          if(a[hi]>= x)
+               return lsearch(a,lo,hi,x);
+          else
+               lo = hi+1 , hi +=jump;
+          }
+          return -1;
+}
+
+
 int main(){
-    int n,x,m,c=0,pos=0;
-    cout<<"Enter size of array: ";
-    cin>>n;
-    int a[n];
-    cout<<"Enter elements of array: ";
-    for(int i=0;i<n;i++){
-        cin>>a[i];
-    }
-    cout<<"Enter element to be searched: ";
-    cin>>x;
-    jsearch(a,n,x);
-    for(int i=l;i<=h;i++){
-        if(x==a[i])
-            c++;
-            pos=i;
-    }
-    if(c>=1)
-        cout<<"Element is present at index "<<pos;
-    else    
-        cout<<"Element is not present";
+     cout<<"Enter the size of array: ";
+     int n,x;
+     cin>>n;
+     int a[n];
+     cout<<"Enter the array elements: ";
+     for(int i=0;i<n;i++){
+          cin>>a[i];
+     }
+     cout<<"Enter the number to be searched: ";
+     cin>>x;
+     int ind = jsearch(a,n,x);
+     if(ind!=-1){
+          cout<<"The entered element is present at index: "<<ind;
+     }
+     else{
+          cout<<"The entered element is not in the array ";
+     }
+     // ind!=-1?cout<<"the entered element is present at index at: "<<ind<<"\n":cout<<"it is not present in the array\n";
 
 }

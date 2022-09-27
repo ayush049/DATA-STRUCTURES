@@ -21,3 +21,18 @@
 # else:
 #     print(n,"is not a prime number")
 
+# from googletrans import Translator
+# t=Translator()
+# a=input("Enter the statement :- ")
+# result=t.t(a,dest='hi')
+# print(result.text)
+
+
+
+# a=12
+# b=23.5
+# c='ABESEC'
+# print(a,b,c,sep='\n')
+
+c=0
+simple_list=[0,1]
