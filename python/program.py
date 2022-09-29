@@ -34,5 +34,5 @@
 # c='ABESEC'
 # print(a,b,c,sep='\n')
 
-c=0
-simple_list=[0,1]
+for i in range(4,10):
+    print(i)
