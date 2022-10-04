@@ -1,18 +1,22 @@
+// INTERSECTION OF TWO ARRAYS
+
 #include<iostream>
 using namespace std;
 int main(){
     
-    int a[10], b[10], c[20];
+    int c[20];
     int m, n,c1,c2,c3;
     
      cout<<"Enter the size of first array :- ";
      cin>>m;
+     int a[m];
      cout<<"Enter the first array elements : ";
      for(int i=0;i<=m-1;i++){
          cin>>a[i];
      }
      cout<<"Enter the size of second array :- ";
      cin>>n;
+     int b[n];
      cout<<"Enter the second array elements : ";
      for(int j=0;j<=n-1;j++){
         cin>>b[j];
