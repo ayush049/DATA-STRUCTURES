@@ -39,7 +39,7 @@ int main() {
    cout << "Enter the Element to be search: ";
    cin >> x;
    if((pos = Exponantial_Search(a, 0, n, x)) >= 0)
-      cout << "Element founded !!! at :- " << pos;
+      cout << "Element founded at :- " << pos;
    else
-      cout << "No Element founded." ;
+      cout << "Element not founded." ;
 }

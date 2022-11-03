@@ -4,7 +4,7 @@ int main(){
     
     int a[10], b[10], c[20];
     int m, n,c1=0;
-    
+    cout<<"Ayush Sharma   2100320100048    CSE A"<<endl;
      cout<<"Enter the size of first array :- ";
      cin>>m;
      cout<<"Enter the first array elements : ";
@@ -42,7 +42,7 @@ int main(){
         k++;
         c1++;
     }
-    cout<<"array1 - array2 is:"<<endl;
+    cout<<"array1 - array2 is: ";
     for(i=0;i<c1;i++){
         cout<<c[i]<<" ";
     } 

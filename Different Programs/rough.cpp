@@ -1,44 +1,3 @@
-// #include <bits/stdc++.h>
-// using namespace std;
-
-// int main(){
-//     int t_c;
-//     string s;
-//     cin>>t_c;
-//     while(t_c--){
-//         cin>>s;
-//         int i=strlen(s);
-//         while(
-            
-//         }
-//     }
-// 	return 0;
-// }
-
-
-
-// #include <iostream>
-// #include <string>
-// using namespace std;
-
-// int main() {
-//     int t_c;
-//     string s,t,m;
-//     cin>>t_c;
-//     while(t_c--){
-//         cin>>s>>t;
-//         for(int i=1;i<s.size;i++){
-//             for(int j=1;j<t.size;j++){
-//                 if(s[i]==t[j])
-//                     m[]
-//             }
-//         }
-//     }
-// 	return 0;
-// }
-
-
-
 // #include<bits/stdc++.h>
 // using namespace std;
 // #define TRUE 1
@@ -48,7 +7,6 @@
 //     int top;
 // };
 // struct Stack S;
-
 // void Initialize(){
 //     S.top=-1;
 // }
@@ -61,7 +19,6 @@
 //         S.top=S.top+1;
 //         S.item[S.top]=x;
 //     }
-
 // }
 // int IsEmpty(){
 //     if (S.top==-1){
@@ -139,27 +96,25 @@
 // }
 
 
-// leetcode contest question below 
 
-// string oddString(vector<string>& wd) {
-//             int n = wd[0].size();
-//             map<vector<int>,int>as1;
-//             for(int i=0;i<wd.size();i++){
-//                     vector<int>tp;
-//                     for(int j=1;j<n;j++){
-//                         tp.push_back(wd[i][j]-wd[i][j-1]);}
-//                     as1[tp]=as1[tp]+1;}
-//             vector<int>tps;
-//             for(auto i : as1){
-//                     if(i.second==1){
-//                             tps=i.first;}}
-//             for(int i=0;i<wd.size();i++){
-//                     vector<int>tp;
-//                    for(int j=1;j<n;j++){
-//                         tp.push_back(wd[i][j]-wd[i][j-1]);}
-//                    if(tp==tps){
-//                         return(wd[i]);}}
-//             return(wd[0]);
+
+// #include <iostream>
+// using namespace std;
+// int main() {
+//     int a[10],c[10];
+//     for(int i=0;i<=5;i++){
+//         cin>>a[i];
+//     }
+//     int min=a[0];
+//     for(int j=0;j<=5;j++){
+//         if(a[j]<=min)
+//             min=a[j];
+//     }
+//      cout<<min;
+
+//     return 0;
+// }
+
 
 
 

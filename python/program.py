@@ -71,7 +71,82 @@
 
 
 
+'''square=[value**2 for value in range(1,11)]
+ print(square)'''
 
 
-square=[value**2 for value in range(1,11)]
-print(square)
+
+
+
+# taking user input in list in python
+'''list=[]
+n=int(input("Enter the size: "))
+for i in range(0,n):
+    a=int(input("Enter the element: "))
+    list.append(a)
+print("list is: ",list)'''
+
+# Another method of list input 
+'''inputlist=input("please enter the list element of type integer").split()'''
+
+# method of traversing a list
+'''for i in inputlist:
+    if(int(i)>0):
+        print(i,end=" ")'''
+
+# nested list as a matrix
+'''nes=[[1,2,3],[3,4,5],[5,6,7]]
+for i in range(len(nes)):
+    for j in range(len(nes[i])):
+        print(nes[i][j],end=" ")
+    print()'''
+
+
+# flat list from a nested list
+
+'''nes=[[1,2],[3,4],[5,6,7]]
+newlist=[]
+for i in range(len(nes)):
+    for j in range(len(nes[i])):
+        newlist.append(nes[i][j])
+print(newlist)'''
+
+# list comprehensions
+
+'''l=[3**x for x in range(10)]
+print(l)'''
+
+#1 even numbers
+'''l=[x for x in range(10) if x%2==0]
+print(l)'''
+
+#2
+'''l=["even" if x%2==0 else "odd" for x in range(10)]
+print(l)'''
+
+
+
+# inputlist=input("enter the list elements: ").split()
+# for i in inputlist:
+#     print(i)
+
+
+l=[10,20,3,100,100]
+'''for i in range(len(l)):
+    print(i)
+    if l[i]%2==0:
+        l[i]=l[i]+10
+    else:
+        l[i]=l[i]+5
+print("updated list is: ",l)'''
+
+
+'''l2=[]
+l3=[]
+for i in range(len(l)):
+    if l[i] not in l2:
+        l2.append(i)
+    else:
+        l3.append(i)
+print(l2)
+print(l3)'''

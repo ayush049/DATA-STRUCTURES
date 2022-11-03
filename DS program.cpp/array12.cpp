@@ -4,17 +4,17 @@ int main(){
     
     int a[10], b[10], c[20];
     int m, n,c1=0;
-    
+    cout<<"Ayush Sharma   2100320100048    CSE A"<<endl;
      cout<<"Enter the size of first array :- ";
      cin>>m;
      cout<<"Enter the first array elements : ";
-     for(int i=0;i<=m-1;i++){
+     for(int i=0;i<m;i++){
          cin>>a[i];
      }
      cout<<"Enter the size of second array :- ";
      cin>>n;
      cout<<"Enter the second array elements : ";
-     for(int j=0;j<=n-1;j++){
+     for(int j=0;j<n;j++){
         cin>>b[j];
     }
     
@@ -45,9 +45,10 @@ int main(){
         c[k]=b[j];
         j++;
         k++;
-    cout<<"Symmetric difference is:"<<endl;
+    cout<<"Symmetric difference is: ";
     for(i=0;i<m+n-c1;i++){
         cout<<c[i]<<" ";
     } 
-    return 0;
+        return 0;
+    }
 }

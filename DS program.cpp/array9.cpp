@@ -6,22 +6,21 @@ int main(){
     
     int c[20];
     int m, n,c2;
-    
-     cout<<"Enter the size of first array :- ";
-     cin>>m;
-     int a[m];
-     cout<<"Enter the first array elements : ";
-     for(int i=0;i<=m-1;i++){
-         cin>>a[i];
-     }
-     cout<<"Enter the size of second array :- ";
-     cin>>n;
-     int b[n];
-     cout<<"Enter the second array elements : ";
-     for(int j=0;j<=n-1;j++){
-        cin>>b[j];
+    cout<<"Ayush Sharma   2100320100048    CSE A"<<endl;
+    cout<<"Enter the size of first array :- ";
+    cin>>m;
+    int a[m];
+    cout<<"Enter the first array elements : ";
+    for(int i=0;i<m;i++){
+        cin>>a[i];
     }
-    
+    cout<<"Enter the size of second array :- ";
+    cin>>n;
+    int b[n];
+    cout<<"Enter the second array elements : ";
+    for(int j=0;j<n;j++){
+       cin>>b[j];
+    }
     //logic
     int i=0,j=0,k=0;
     while(i<m && j<n){
@@ -53,7 +52,7 @@ int main(){
         j++;
         k++;
     }
-    cout<<"union of arrays is:"<<endl;
+    cout<<"union of arrays is: ";
     for(i=0;i<m+n-c2;i++){
         cout<<c[i]<<" ";
     } 
