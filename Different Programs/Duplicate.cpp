@@ -18,12 +18,13 @@ int main(){
         c[a[i]]=c[a[i]]+1;
     }
     for(int i=1;i<=max;i++){
-        if(c[i]>1)
-            cout<<i<<" is repeating "<<c[i]<<" times"<<endl;
-        else if(c[i]==1)
-            cout<<i<<" is not repeating"<<endl;
-        else if(c[i]==0)
-             cout<<i<<" is missing"<<endl;
+        cout<<c[i]<<" ";
+        // if(c[i]>1)
+        //     cout<<i<<" is repeating "<<c[i]<<" times"<<endl;
+        // else if(c[i]==1)
+        //     cout<<i<<" is not repeating"<<endl;
+        // else if(c[i]==0)
+        //      cout<<i<<" is missing"<<endl;
      }
 
 }
