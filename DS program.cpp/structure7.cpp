@@ -13,8 +13,8 @@ struct marks
     int pm;
 };
 int main(){
-    struct marks s[5];
-    for(int i=1;i<=5;i++){
+    struct marks s[100];
+    for(int i=1;i<=3;i++){
         cout<<"Enter the roll no.: ";
         cin>>s[i].rn;
         cout<<"Enter name: ";
@@ -27,8 +27,11 @@ int main(){
         cin>>s[i].pm;
     }
     int sm=0;
-    for(int j=1;j<=5;j++){
+    for(int j=1;j<=3;j++){
         sm=sm+s[j].cm+s[j].mm+s[j].pm;
+        //cout<<sm<<endl;
+        cout<<"The percentage of "<<j<<" student is: ";
+        cout<<(sm/3)<<endl;
+        sm=0;
     }
-    
 }

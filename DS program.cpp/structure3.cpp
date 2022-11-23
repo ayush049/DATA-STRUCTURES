@@ -1,6 +1,5 @@
-//Write a program to store and print the roll no., name, age, address and marks of 15 students using structure.
+// //Write a program to store and print the roll no., name, age, address and marks of 15 students using structure.
 
-// output not coming properly
 #include<bits/stdc++.h>
 using namespace std;
 struct student
@@ -12,10 +11,10 @@ struct student
     int marks;
 };
 int main(){
+    struct student s[20];
     int n;
     cout<<"Enter number of enteries: ";
-    cin>>n;
-    struct student s[n];
+    cin>>n;;
     for(int i=1;i<=n;i++){
         cout<<"Enter the detail for "<<i<<" student"<<endl;
         cout<<"Enter the roll no.: ";
@@ -29,6 +28,7 @@ int main(){
         cout<<"Enter the marks: ";
         cin>>s[i].marks;
     }
+    cout<<"<------------------------------------------------>"<<endl;
     for(int i=1;i<=n;i++){
         cout<<"Data of "<<i<<" student: "<<endl;
         cout<<"Roll number: "<<s[i].rno<<endl;
@@ -38,3 +38,4 @@ int main(){
         cout<<"Marks: "<<s[i].marks<<endl;
     }
 }
+
