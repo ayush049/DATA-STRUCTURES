@@ -1,4 +1,4 @@
-// INFIX TO POSTFIX EVALUATION 
+//Program for Infix to Postfix Coversion (Infix Expression with Parenthesis)
 
 #include<bits/stdc++.h>
 using namespace std;
@@ -16,27 +16,22 @@ void Initialize(){
 int push(char x){
     if (S.top==(10-1)){
         cout<<"Stack Overflow";
-        exit(1);
+        return -1;
     }
     else{
         S.top=S.top+1;
         S.item[S.top]=x;
-        return S.top;
+        return 1;
     }
 
 }
 int IsEmpty(){
-    if (S.top==-1){
-        return TRUE;
-    }
-    else{
-        return FALSE;
-    }
+    return S.top==-1;
 }
-char Pop(){
+int Pop(){
     if(IsEmpty()){
         cout<<"Stack Underflow";
-        exit(1);
+        return -1;
     }
     else{
         char x=S.item[S.top];
@@ -44,13 +39,25 @@ char Pop(){
         return x;
     }
 }
-int stacktop(){
+char stacktop(){
     char x= S.item[S.top];
     return x;
 }
-int precedence(char a , char b){
-    if(a=='^' || a=='*' || a=='/' || a=='%'){
-        if(b=='^'){
+int precedence(char a1 , char a2){
+    if(a1=='('){
+        return FALSE;
+    }
+    else{
+        if(a2=='('){
+            return FALSE;
+        }
+        else{
+            if(a2==')'){
+                return TRUE;
+            }
+            else{
+                if((a1=='^') || (a1=='*') || (a1=='/') || (a1=='%')){
+        if(a2=='^'){
             return FALSE;
         }
         else{
@@ -58,23 +65,27 @@ int precedence(char a , char b){
         }
     }
     else{
-        if(b=='+' || b=='-'){
-            return TRUE;
-        }
-        else{
-            return FALSE;
+        if((a1=='+') || (a1=='-')){
+            if((a2=='+') || (a2=='-')){
+                return TRUE;
+            }
+            else{
+                return FALSE;
+            }
         }
     }
 }
+            }
+        }
+    }
 void infix_to_postfix(char *infix){
     int i=0,j=0;
     char postfix[20],s,x;
     Initialize();
     while(infix[i]!='\0'){
-        s=infix[i];
-        i++;
+        s=infix[i++];
         if((s>='a' && s<='z')||(s>='A' && s<='Z')||(s>='0' && s<='9')){
-            postfix[j]=s;
+            postfix[j]==s;
             j++;
         }
         else{
@@ -83,7 +94,12 @@ void infix_to_postfix(char *infix){
                 postfix[j]=x;
                 j++;
             }
-            push(s);
+            if(s==')'){
+                Pop();
+            }
+            else{
+                push(s);
+            }
         }
     }
     while(!IsEmpty()){
@@ -95,6 +111,6 @@ void infix_to_postfix(char *infix){
     cout<<"postfix :- "<<postfix;
 }
 int main(){
-    char infix[]="a+b*c";
+    char infix[]="a+(b-c)";
     infix_to_postfix(infix);
 }
