@@ -1,5 +1,5 @@
 #include<iostream>
-//#include<ll.h>
+//#include "ll.h"
 using namespace std;
 struct node {
     int info;

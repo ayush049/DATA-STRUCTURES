@@ -150,3 +150,29 @@ for i in range(len(l)):
         l3.append(i)
 print(l2)
 print(l3)'''
+
+
+
+# # polymorphism
+
+# a=input()
+# b=input()
+# c=input()
+# d=input()
+# e=input()
+
+
+
+class student:
+    language=[]
+    def __init__(self,name):
+        self.name=name
+    def add_long(self,lang_name):
+        self.language.append(lang_name)
+student1=student("Abhay")
+student2=student("Nilabh")
+student3=student("Arun")
+student3.add_lang("C")
+print(student3.language)
+
+

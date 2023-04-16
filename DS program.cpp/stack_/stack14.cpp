@@ -111,6 +111,6 @@ void infix_to_postfix(char *infix){
     cout<<"postfix :- "<<postfix;
 }
 int main(){
-    char infix[]="a+(b-c)";
+    char infix[]="a+b*c^d-e/f";
     infix_to_postfix(infix);
 }

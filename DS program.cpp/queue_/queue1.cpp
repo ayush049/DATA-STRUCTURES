@@ -16,25 +16,25 @@ void initialize(struct queue *q){
     q->r=-1;
 }
 int isempty(struct queue *q){
-    if(q->r - q->f +1 == 0){
+    if(q->f==q->r)
         return true;
-    }
     else
         return false;
 }
-void insert(struct queue *q,int x){
+
+void enqueue(struct queue *q,int x){
     if(q->r==size-1){
-        cout<<"Queue oveflow";
-        exit(1);
+        cout<<"Queue overflow";
     }
     else{
         q->r+=1;
         q->a[q->r]=x;
     }
 }
-int deletion(struct queue *q){
+
+int dequeue(struct queue *q){
     if(isempty(q)){
-        cout<<"Queue underflows";
+        cout<<"Stack underflow";
         exit(1);
     }
     else{
@@ -43,6 +43,7 @@ int deletion(struct queue *q){
         return x;
     }
 }
+
 void display(struct queue *q){
     for(int i=q->f;i<=q->r;i++){
         cout<<q->a[i]<<" ";
@@ -54,11 +55,15 @@ void display(struct queue *q){
 int main(){
     struct queue q;
     initialize(&q);
-    insert(&q,20);
-    insert(&q,24);
-    insert(&q,55);
-    insert(&q,25);
+    enqueue(&q,20);
+    enqueue(&q,24);
+    enqueue(&q,55);
+    enqueue(&q,25);
     cout<<"Before deletion: ";display(&q);
-    cout<<"Deleted element: "<<deletion(&q)<<endl;;
-    cout<<"After deletion: ";display(&q);
+    cout<<"Deleted element: "<<dequeue(&q)<<endl;;
+    cout<<"After deletion: ";
+    display(&q);
+    cout<<"Deleted element "<<dequeue(&q)<<endl;
+    cout<<"After deletion: ";
+    display(&q);
 }
